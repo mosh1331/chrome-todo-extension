@@ -1,41 +1,60 @@
 export const styles = {
-    container: {
-      fontFamily: 'Arial, sans-serif',
-      padding: '20px',
-      width: '250px',
-      backgroundColor: '#f1f1f1',
-      borderRadius: '8px',
-      boxShadow: '0 0 10px rgba(0,0,0,0.1)'
-    },
-    header: {
-      margin: '0 0 10px 0',
-      fontSize: '18px'
-    },
-    input: {
-      padding: '8px',
-      width: '140px',
-      marginRight: '10px'
-    },
-    addButton: {
-      padding: '8px',
-      cursor: 'pointer'
-    },
-    list: {
-      padding: '0',
-      listStyle: 'none',
-      marginTop: '20px'
-    },
-    listItem: {
-      marginBottom: '10px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    },
-    removeButton: {
-      backgroundColor: '#e74c3c',
-      color: 'white',
-      border: 'none',
-      cursor: 'pointer',
-      padding: '4px 8px'
-    }
-  };
+  container: {
+    fontFamily: 'Arial, sans-serif',
+    padding: '20px',
+    width: '300px',
+    backgroundColor: '#fefefe',
+    borderRadius: '10px',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+  },
+  header: {
+    margin: '0 0 20px 0',
+    fontSize: '24px',
+    color: '#333',
+  },
+  input: {
+    padding: '10px',
+    width: '200px',
+    marginRight: '10px',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    fontSize: '16px',
+  },
+  addButton: {
+    padding: '10px',
+    cursor: 'pointer',
+    backgroundColor: '#28a745',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    fontSize: '16px',
+  },
+  list: {
+    padding: '0',
+    listStyle: 'none',
+    marginTop: '20px',
+  },
+  listItem: {
+    backgroundColor: '#fff',
+    padding: '12px',
+    marginBottom: '10px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderRadius: '8px',
+    boxShadow: '0 1px 4px rgba(0,0,0,0.1)',
+    transition: 'background-color 0.2s ease',
+  },
+  listItemHover: {
+    backgroundColor: '#f1f1f1',
+  },
+  removeButton: {
+    backgroundColor: '#e74c3c',
+    color: 'white',
+    border: 'none',
+    cursor: 'pointer',
+    padding: '6px 10px',
+    borderRadius: '5px',
+    fontSize: '12px',
+  },
+};
