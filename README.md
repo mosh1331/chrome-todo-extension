@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Sticky To-Do List Chrome Extension
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Chrome extension built with React that provides a sticky to-do list. You can easily add tasks, mark them as completed, delete them, and reorder them using drag-and-drop functionality powered by `react-beautiful-dnd`. The extension uses Chrome's `sync` storage API to persist tasks across devices.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add, remove, and reorder tasks
+- Persistent storage using Chrome's sync API
+- Drag-and-drop to rearrange tasks with `react-beautiful-dnd`
+- Simple and responsive design
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+These instructions will help you set up the project on your local machine for development and testing purposes.
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You need to have the following installed on your machine:
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) (version 12 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+- Chrome browser
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup and Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/yourusername/sticky-todo-extension.git
+   cd sticky-todo-extension
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Install dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Once inside the project folder, install the required dependencies:
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Run the project in development mode:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Use the following command to start the development server:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This will start the app at `http://localhost:3000/`, but remember that Chrome extension-specific features like `chrome.storage` won't work here. This is just for testing the React components.
 
-### Analyzing the Bundle Size
+# Building the Extension
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  ## Build the extension:
 
-### Making a Progressive Web App
+To create a production build that can be used as a Chrome extension, run the following command in the terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+```
 
-### Advanced Configuration
+This will generate a build folder containing the static files required for the extension. The files in this folder will be used when loading the extension into Chrome.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Load the Extension into Chrome
+Open Chrome and navigate to the Extensions page:
 
-### Deployment
+Open a new tab in Chrome and go to the extensions page:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+`chrome://extensions/`
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Enable Developer Mode:
+
+In the top-right corner of the Extensions page, you will see a toggle labeled Developer mode. Enable this by clicking on the toggle switch.
+
+### Load the unpacked extension:
+
+After enabling Developer mode, a few new options will appear. Click the Load unpacked button.
+A file explorer window will open. Navigate to the build folder inside your project directory, and select it.
+Chrome will load your extension, and you should see it appear in the list of installed extensions. You can now find your Sticky To-Do List in the extensions tray.
+
+After following these steps, your Chrome extension will be installed and ready to use. You can access it by clicking on the extension icon in the Chrome toolbar. If you need to make updates, simply rebuild the project (npm run build) and reload the unpacked extension from the chrome://extensions/ page.
